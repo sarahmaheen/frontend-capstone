@@ -37,7 +37,7 @@ const StudentRegister = () => {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let response = await axios.post(`/api/student/studentRegister`, {
+            let response = await axios.post(`https://backend-capstone-production.up.railway.app/api/student/studentRegister`, {
                 ...student
             });
 

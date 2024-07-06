@@ -17,7 +17,7 @@ const MyCourses = () => {
              
         async function myCourses(){
           try {
-                let response = await axios.get('/api/teacher/mycourses',{
+                let response = await axios.get('https://backend-capstone-production.up.railway.app/api/teacher/mycourses',{
                     params:{
                         id
                     }

@@ -102,7 +102,7 @@ const CourseForm = () => {
     if (courseData.courseChapters.length < 1) {
       return;
     }
-    let response = await axios.post('/api/courses/updateCourse', { ...courseData,teacherId,teacherName }, {
+    let response = await axios.post('https://backend-capstone-production.up.railway.app/api/courses/updateCourse', { ...courseData,teacherId,teacherName }, {
       params: {
         id: courseId
       }
@@ -165,7 +165,7 @@ const CourseForm = () => {
 
   let courseDataFetch = async () => {
     try {
-      const response = await axios.get('/api/courses/getCourse', {
+      const response = await axios.get('https://backend-capstone-production.up.railway.app/api/courses/getCourse', {
         params: {
           courseIdValue: courseId,
         },
@@ -188,7 +188,7 @@ const CourseForm = () => {
       if (!courseData.courseCategory || !courseData.courseTitle || !courseData.coursePrice || !courseData.courseDescription || !courseData.courseImage) {
         return;
       }
-      let response = await axios.post('/api/courses/createCourse', { ...courseData,teacherId,teacherName });
+      let response = await axios.post('https://backend-capstone-production.up.railway.app/api/courses/createCourse', { ...courseData,teacherId,teacherName });
       let courseId = response.data.id;
       navigate(`/addChapter/${courseId}`)
 

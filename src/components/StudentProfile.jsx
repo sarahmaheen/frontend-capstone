@@ -18,7 +18,7 @@ const StudentProfile = () => {
             try {
                 let token = localStorage.getItem('token')
 
-                let response = await axios.get('/api/auth/verify', {
+                let response = await axios.get('https://backend-capstone-production.up.railway.app/api/auth/verify', {
                     headers: {
                         token: token
                     }
@@ -43,7 +43,7 @@ const StudentProfile = () => {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let response = await axios.post(`/api/student/teacherUpdate`, {
+            let response = await axios.post(`https://backend-capstone-production.up.railway.app/api/student/teacherUpdate`, {
                 ...student
             });
 

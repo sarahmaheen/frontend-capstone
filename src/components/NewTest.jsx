@@ -20,7 +20,7 @@ const CourseForm = () => {
 
   let courseDataFetch = async () => {
     try {
-      const response = await axios.get('/api/courses/getCourse', {
+      const response = await axios.get('https://backend-capstone-production.up.railway.app/api/courses/getCourse', {
         params: {
           courseIdValue: courseId,
         },

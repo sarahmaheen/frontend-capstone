@@ -39,7 +39,7 @@ const CourseOverview = () => {
   useEffect(()=>{
      async function fetchCourse(){
       try {
-        let response = await axios.get('/api/courses/fetchCourse',{
+        let response = await axios.get('https://backend-capstone-production.up.railway.app/api/courses/fetchCourse',{
           params:{
             id:courseId
           }

@@ -19,7 +19,7 @@ const StudentLogin = () => {
     let handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        let response = await axios.post(`/api/student/studentLogin`, {
+        let response = await axios.post(`https://backend-capstone-production.up.railway.app/api/student/studentLogin`, {
           ...studentLoginData
         });
      console.log(response.data)

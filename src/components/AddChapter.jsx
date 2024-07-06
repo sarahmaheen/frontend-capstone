@@ -83,7 +83,7 @@ const AddChapter = () => {
                 chapterDuration
             }
 
-            let response = await axios.post('/api/chapters/addChapter', { chapterTitle, chapterVideo,chapterDuration }, {
+            let response = await axios.post('https://backend-capstone-production.up.railway.app/api/chapters/addChapter', { chapterTitle, chapterVideo,chapterDuration }, {
 
                 params: {
                     id: courseId

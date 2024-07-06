@@ -17,7 +17,7 @@ const StudentMain = () => {
   let token = localStorage.getItem('token');
   async function authTeacher() {
     try {
-      let response = await axios.get('/api/auth/verify', {
+      let response = await axios.get('https://backend-capstone-production.up.railway.app/api/auth/verify', {
         headers: {
           token: token
         }
@@ -41,7 +41,7 @@ const StudentMain = () => {
 
   let getCourses = async () => {
     try {
-      let response = await axios.get('/api/courses/getAllcourses');
+      let response = await axios.get('https://backend-capstone-production.up.railway.app/api/courses/getAllcourses');
       let arr = response.data;
       arr.reverse();
       setAllCourses(arr);
